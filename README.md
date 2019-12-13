@@ -9,6 +9,10 @@ The basic principle is that it checks sunrise and weather APIs to initiate your 
 
 ### Installing
 
+#### Clone the repository
+#### Editing the config file
+#### Set up as a scheduled task
+
 
 
 ## Deployment
