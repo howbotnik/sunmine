@@ -15,7 +15,7 @@
 `longitude = 0.1278`
 
 `[Tokens]`<br>
-*# API keys are available here: https://openweathermap.org/*
+*# API keys are available here: https://openweathermap.org/*<br>
 `open_weather = **OpenweatherAPIKey**`
 
 `[Communication]`<br>
