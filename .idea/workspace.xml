@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9a94eb6-1269-477a-9e7f-b7c4dcdd95d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/miningState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sunmine.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/sunmine.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -59,7 +59,8 @@ def main():
         output = "Mining Off"
         if isMinerAlreadyRunning(config.getProgramName()):
             logging.debug('Yes %s process was running, killing.' % (config.getProgramName()))
-            os.system('Taskkill /IM ' + config.getProgramName())
+            killProcess(config.getProgramName())
+
         else:
             logging.debug('Mining process not running, do not need to kill process.')
         if "on" in currentState:
@@ -81,6 +82,18 @@ def isTheSunUp(sunSet, sunRise):
         return True
     else:
         return False
+
+def killProcess(processName):
+    if os.name == "nt":
+        # OS is windows
+        os.system('Taskkill /IM ' + config.getProgramName())
+    elif os.name == "posix":
+        # OS is Linux
+        for proc in psutil.process_iter():
+            # check whether the process name matches
+            if proc.name() == processName:
+                proc.kill()
+
 
 if __name__ == "__main__":
     main()
