@@ -19,6 +19,10 @@ Your computer runs the following software:
 * Open *sunmine.cfg*
 * Read **CONFIG_README.md** for help setting up
 
+### Running
+* `cd sunmine`
+* `python __main__.py`
+
 #### Set up as a scheduled task
 Use crontab or Windows 'Task Scheduler' if you want the program to run automatically.
 
