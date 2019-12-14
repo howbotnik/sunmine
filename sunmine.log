@@ -1,0 +1,9 @@
+Reading file.
+2019-11-29 22:50:02
+Current state of the miner: off
+Getting weather data from the internet...
+Weather is acceptable for mining: Clear
+Getting sunrise/sunset data from the internet...
+Seeing if now.time() is between sunrise and sunset...
+Now time is in dark hours
+Mining Off
