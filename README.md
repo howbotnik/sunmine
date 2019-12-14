@@ -6,16 +6,21 @@ The basic principle is that it checks sunrise and weather APIs to initiate your 
 ## Getting Started
 
 ### Prerequisites
+Your computer runs the following software:
+* Python 3.7+ *[download](https://www.python.org/downloads/)*
+* pip package installer *[download](https://pip.pypa.io/en/stable/installing/)*
 
 ### Installing
+* `pip install requests` 
+* `pip install psutil`
+* `git clone https://github.com/howbotnik/sunmine.git`
 
-#### Clone the repository
-#### Editing the config file
+#### Editing the config file (Essential)
+* Open *sunmine.cfg*
+* Read **CONFIG_README.md** for help setting up
+
 #### Set up as a scheduled task
-
-
-
-## Deployment
+Use crontab or Windows 'Task Scheduler' if you want the program to run automatically.
 
 ## Built with
 
