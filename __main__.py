@@ -18,6 +18,8 @@ def main():
 																																																							   # weather
     logging.debug("Getting weather data from the internet...")
     weatherData = getWeather.getWeatherData()
+
+
     weatherId = weatherData.get("weather")[0].get("id")
     acceptableWeatherCodes = ["800", "801", "802"]
 
@@ -39,6 +41,7 @@ def main():
                 break
             else:
                 goWeather = False
+        logging.debug("Weather conditions: " + weatherData.get("weather")[0].get("main"))
         logging.debug("Weather is acceptable for mining: " + str(goWeather))
 
     output = ""
