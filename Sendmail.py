@@ -1,5 +1,5 @@
 import smtplib
-import configController as config
+import ConfigController as config
 import logging
 
 def send(message):

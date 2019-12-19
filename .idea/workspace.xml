@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9a94eb6-1269-477a-9e7f-b7c4dcdd95d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TestWeather.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sendmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/sendmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configController.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getSunTimes.py" beforeDir="false" afterPath="$PROJECT_DIR$/SunTimes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getWeather.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiningState.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sendmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sendmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunmine.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/sunmine.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timeCompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/TimeCompare.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,7 +40,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sunmine" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -37,7 +52,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__main__.py" />
+      <option name="SCRIPT_NAME" value="D:\Documents\github\sunmine\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,25 +97,29 @@
     </state>
     <state x="337" y="101" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1576579333093" />
     <state x="421" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1576018469534" />
-    <state width="1003" height="331" key="GridCell.Tab.0.bottom" timestamp="1576579225727">
-      <screen x="0" y="0" width="1024" height="728" />
+    <state width="1345" height="138" key="GridCell.Tab.0.bottom" timestamp="1576787321926">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1003" height="331" key="GridCell.Tab.0.center" timestamp="1576579225727">
-      <screen x="0" y="0" width="1024" height="728" />
+    <state width="1345" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576787321926" />
+    <state width="1345" height="138" key="GridCell.Tab.0.center" timestamp="1576787321921">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1003" height="331" key="GridCell.Tab.0.left" timestamp="1576579225727">
-      <screen x="0" y="0" width="1024" height="728" />
+    <state width="1345" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576787321921" />
+    <state width="1345" height="138" key="GridCell.Tab.0.left" timestamp="1576787321921">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1003" height="331" key="GridCell.Tab.0.right" timestamp="1576579225727">
-      <screen x="0" y="0" width="1024" height="728" />
+    <state width="1345" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576787321921" />
+    <state width="1345" height="138" key="GridCell.Tab.0.right" timestamp="1576787321921">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
+    <state width="1345" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576787321921" />
   </component>
 </project>

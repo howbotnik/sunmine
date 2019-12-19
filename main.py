@@ -1,23 +1,25 @@
 import os
-import getWeather
-import getSunTimes
-import timeCompare
-import sendmail
-import miningState
+from Weather import Weather
+import SunTimes
+import TimeCompare
+import Sendmail
+import MiningState
 import psutil
 import logging
-import configController as config
+import ConfigController as config
 
 def main():
+    weather = Weather()
+
     logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.DEBUG)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.debug('Welcome to Sunmine 2019')
 
-    currentState = miningState.getState()
+    currentState = MiningState.getState()
     logging.debug("Current state of the miner: " + currentState)
 																																																							   # weather
     logging.debug("Getting weather data from the internet...")
-    weatherData = getWeather.getWeatherData()
+    weatherData = weather.getWeatherData()
 
 
     weatherId = weatherData.get("weather")[0].get("id")
@@ -25,7 +27,7 @@ def main():
 
     # sunset/rise
     logging.debug("Getting sunrise/sunset data from the internet...")
-    sunData = getSunTimes.getSunData()
+    sunData = SunTimes.getSunData()
     sunRise = sunData.get("results").get("sunrise")
     sunSet = sunData.get("results").get("sunset")
 
@@ -55,8 +57,8 @@ def main():
             os.startfile(config.getProgramLocation())
         if "off" in currentState:
             logging.debug("Changing state, sending email.")
-            sendmail.send(output)
-            miningState.setState("on")
+            Sendmail.send(output)
+            MiningState.setState("on")
     else:
         logging.debug("Mining Off")
         output = "Mining Off"
@@ -68,8 +70,8 @@ def main():
             logging.debug('Mining process not running, do not need to kill process.')
         if "on" in currentState:
             logging.debug("Changing state, sending email.")
-            sendmail.send(output)
-            miningState.setState("off")
+            Sendmail.send(output)
+            MiningState.setState("off")
 
 def isMinerAlreadyRunning(processName):
     for proc in psutil.process_iter():
@@ -81,7 +83,7 @@ def isMinerAlreadyRunning(processName):
     return False
 
 def isTheSunUp(sunSet, sunRise):
-    if timeCompare.isTimeInRange(sunSet, sunRise) == True:
+    if TimeCompare.isTimeInRange(sunSet, sunRise) == True:
         return True
     else:
         return False
@@ -96,7 +98,6 @@ def killProcess(processName):
             # check whether the process name matches
             if proc.name() == processName:
                 proc.kill()
-
 
 if __name__ == "__main__":
     main()
