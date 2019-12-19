@@ -25,7 +25,7 @@ Your computer runs the following software:
 
 ### Running
 * `cd sunmine`
-* `python __main__.py` <br/><br/>
+* `python main.py` <br/><br/>
 
 #### Set up as a scheduled task:
 Use crontab or Windows 'Task Scheduler' if you want the program to run automatically.

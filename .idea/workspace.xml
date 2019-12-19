@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9a94eb6-1269-477a-9e7f-b7c4dcdd95d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestWeather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configController.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getSunTimes.py" beforeDir="false" afterPath="$PROJECT_DIR$/SunTimes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getWeather.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiningState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sendmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sendmail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sunmine.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/sunmine.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeCompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/TimeCompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
