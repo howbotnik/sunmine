@@ -6,32 +6,16 @@ class Weather:
     built_api_url = ""
 
     def __init__(self):
-        self.addApiUrlBaseToBuiltUrl()
-        self.addLocationToBuiltUrl()
-        self.addCommaToBuiltUrl()
-        self.addCountryCodeToBuiltUrl()
-        self.addAppIdToBuiltUrl()
-        self.addApiTokenToBuiltUrl()
+        self.addStringToUrl(self.api_url_base)
+        self.addStringToUrl(Config.getLocation())
+        self.addStringToUrl(",")
+        self.addStringToUrl(Config.getCountryCode())
+        self.addStringToUrl("&APPID=")
+        self.addStringToUrl(Config.getOpenWeatherToken())
 
     def getWeatherData(self):
         r = requests.get(self.built_api_url)
-        print("App url" + self.built_api_url)
         return r.json()
 
-    def addApiUrlBaseToBuiltUrl(self):
-        self.built_api_url += self.api_url_base
-
-    def addCommaToBuiltUrl(self):
-        self.built_api_url += ","
-
-    def addCountryCodeToBuiltUrl(self):
-        self.built_api_url += Config.getCountryCode()
-
-    def addAppIdToBuiltUrl(self):
-        self.built_api_url += "&APPID="
-
-    def addApiTokenToBuiltUrl(self):
-        self.built_api_url += Config.getOpenWeatherToken()
-
-    def addLocationToBuiltUrl(self):
-        self.built_api_url += Config.getLocation()
+    def addStringToUrl(self, stringToAdd):
+        self.built_api_url += stringToAdd

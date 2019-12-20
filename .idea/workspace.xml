@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9a94eb6-1269-477a-9e7f-b7c4dcdd95d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestWeather.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestWeather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sunmine.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/sunmine.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,29 +91,29 @@
     </state>
     <state x="337" y="101" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1576579333093" />
     <state x="421" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1576018469534" />
-    <state width="1345" height="138" key="GridCell.Tab.0.bottom" timestamp="1576787321926">
+    <state width="1345" height="294" key="GridCell.Tab.0.bottom" timestamp="1576868545703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1345" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576787321926" />
-    <state width="1345" height="138" key="GridCell.Tab.0.center" timestamp="1576787321921">
+    <state width="1345" height="294" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576868545703" />
+    <state width="1345" height="294" key="GridCell.Tab.0.center" timestamp="1576868545703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1345" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576787321921" />
-    <state width="1345" height="138" key="GridCell.Tab.0.left" timestamp="1576787321921">
+    <state width="1345" height="294" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576868545703" />
+    <state width="1345" height="294" key="GridCell.Tab.0.left" timestamp="1576868545701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1345" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576787321921" />
-    <state width="1345" height="138" key="GridCell.Tab.0.right" timestamp="1576787321921">
+    <state width="1345" height="294" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576868545701" />
+    <state width="1345" height="294" key="GridCell.Tab.0.right" timestamp="1576868545703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1003" height="331" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1576579225727" />
     <state width="1259" height="151" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1576364270719" />
-    <state width="1345" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576787321921" />
+    <state width="1345" height="294" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576868545703" />
   </component>
 </project>
