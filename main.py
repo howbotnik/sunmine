@@ -16,8 +16,7 @@ def main():
     logging.debug('Welcome to Sunmine 2019')
 
     currentState = MiningState.getState()
-    logging.debug("Current state of the miner: " + currentState)
-																																																							   # weather
+    logging.debug("Current state of the miner: " + currentState)																																																				   # weather
     logging.debug("Getting weather data from the internet...")
     weatherData = weather.getWeatherData()
 

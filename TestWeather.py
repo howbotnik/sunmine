@@ -1,9 +1,10 @@
 import unittest
+from Weather import Weather
 
-class TestWeather(unittest.Weather):
-
+class TestWeather(unittest.TestCase):
+    weather = Weather()
     def test_addStringToUrl(self):
-        self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
+        self.assertEqual(self.weather.addStringToUrl("cheese", "cake"), "cheesecake")
 
 if __name__ == '__main__':
     unittest.main()
