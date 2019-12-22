@@ -15,9 +15,10 @@ Your computer runs the following software:
 * pip package installer *[download](https://pip.pypa.io/en/stable/installing/)*
 
 ### Installing
-* `pip install requests` 
-* `pip install psutil`
+
 * `git clone https://github.com/howbotnik/sunmine.git`
+* `cd sunmine`
+* `pip install -r requirements.txt` 
 
 #### Editing the config file (Essential)
 * Open *sunmine.cfg*
