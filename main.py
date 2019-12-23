@@ -1,7 +1,7 @@
 import os
 from Weather import Weather
+from TimeCompare import TimeCompare
 import SunTimes
-import TimeCompare
 import Sendmail
 import MiningState
 import psutil
@@ -26,7 +26,8 @@ def main():
 
     # sunset/rise
     logging.debug("Getting sunrise/sunset data from the internet...")
-    sunData = SunTimes.getSunData()
+    sunApiUrl = SunTimes.buildSunApiUrl(config)
+    sunData = SunTimes.getSunDataFromApi(sunApiUrl)
     sunRise = sunData.get("results").get("sunrise")
     sunSet = sunData.get("results").get("sunset")
 
@@ -82,7 +83,8 @@ def isMinerAlreadyRunning(processName):
     return False
 
 def isTheSunUp(sunSet, sunRise):
-    if TimeCompare.isTimeInRange(sunSet, sunRise) == True:
+    timeCompare = TimeCompare(sunSet, sunRise)
+    if timeCompare.isTimeInRange() == True:
         return True
     else:
         return False

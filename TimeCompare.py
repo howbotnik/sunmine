@@ -1,18 +1,22 @@
 import datetime
-import logging
 
-def isTimeInRange(upperTime, lowerTime):
-    upper = convertTo24Hours(upperTime)
-    lower = convertTo24Hours(lowerTime)
+class TimeCompare:
+    upperTime = None
+    lowerTime = None
     now = datetime.datetime.now()
-    outcome = False
 
-    if now.time().replace(microsecond=0) < upper.time() and now.time().replace(microsecond=0) > lower.time():
-        outcome = True
-    else:
+    def __init__(self, upperTime, lowerTime):
+        self.upperTime = self.convertTo24Hours(upperTime)
+        self.lowerTime = self.convertTo24Hours(lowerTime)
+
+    def isTimeInRange(self):
         outcome = False
-    return outcome
+        if self.now.time().replace(microsecond=0) < self.upperTime.time() and self.now.time().replace(microsecond=0) > self.lowerTime.time():
+            outcome = True
+        else:
+            outcome = False
+        return outcome
 
-def convertTo24Hours(time):
-    convertedTime = datetime.datetime.strptime(time, "%I:%M:%S %p")
-    return convertedTime
+    def convertTo24Hours(self, time):
+        convertedTime = datetime.datetime.strptime(time, "%I:%M:%S %p")
+        return convertedTime
