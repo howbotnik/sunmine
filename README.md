@@ -9,8 +9,16 @@ It uses APIs that check if the sun has risen and the weather conditions in your 
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
+1. [Getting Started](#getting-started)<br>
+    a. [Prerequisites](#prerequisites)<br>
+    b. [Installing](#installing)<br>
+    c. [Editing the config file](#editing-config)<br>
+    d. [Running](#runnning)<br>
+    e. [Setting up as a scheduled task](#setting-up-as-scheduled-task)<br>
 2. [Built With](#built-with)
+3. [Authors](#authors)
+4. [Licence](#licence)
+5. [Acknowledgements](#acknowledgements)
 
 
 ## Getting Started <a name="getting-started"></a>
@@ -41,23 +49,20 @@ Use crontab or Windows 'Task Scheduler' if you want the program to run automatic
 
 ## Built with <a name="built-with"></a>
 Python & PyCharm Community <br>
-Openweathermap.org weather API <br>
+Weather by Openweathermap.org <br>
+Sun data by api.sunrise-sunset.org
 
 
 ---
 
-## Authors
+## Authors <a name="authors"></a>
 H. Wilson
 
 ---
 
-## License
+## Licence <a name="licence"></a>
 
 ---
 
-## Acknowledgements
-#### Weather API provided by:
-openweathermap.org
+## Acknowledgements <a name="acknowledgements"></a>
 
-#### Sunrise / sunset data provided by:
-api.sunrise-sunset.org
