@@ -7,7 +7,13 @@ It uses APIs that check if the sun has risen and the weather conditions in your 
 
 ---
 
-## Getting Started
+## Table of Contents
+
+1. [Getting Started](#getting-started)
+2. [Built With](#built-with)
+
+
+## Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
 Your computer runs the following software:
@@ -33,8 +39,10 @@ Use crontab or Windows 'Task Scheduler' if you want the program to run automatic
 
 ---
 
-## Built with
-Python & PyCharm Community
+## Built with <a name="built-with"></a>
+Python & PyCharm Community <br>
+Openweathermap.org weather API <br>
+
 
 ---
 
