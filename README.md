@@ -49,7 +49,7 @@ Use crontab or Windows 'Task Scheduler' if you want the program to run automatic
 
 ## Built with <a name="built-with"></a>
 Python & PyCharm Community <br>
-Weather by Openweathermap.org <br>
+Weather by Openweathermap.org *[download](https://www.openweathermap.org/)*<br>
 Sun data by api.sunrise-sunset.org
 
 
