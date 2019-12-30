@@ -13,36 +13,36 @@ It uses APIs that check if the sun has risen and the weather conditions in your 
     a. [Prerequisites](#prerequisites)<br>
     b. [Installing](#installing)<br>
     c. [Editing the config file](#editing-config)<br>
-    d. [Running](#runnning)<br>
+    d. [Running](#running)<br>
     e. [Setting up as a scheduled task](#setting-up-as-scheduled-task)<br>
 2. [Built With](#built-with)
 3. [Authors](#authors)
-4. [Licence](#licence)
-5. [Acknowledgements](#acknowledgements)
+4. [The OpenWeatherMap API](#open-weather)
+5. [Licence](#licence)
 
 
 ## Getting Started <a name="getting-started"></a>
 
-### Prerequisites
+### Prerequisites <a name="prerequisites"></a>
 Your computer runs the following software:
 * Python 3.7+ *[download](https://www.python.org/downloads/)*
 * pip package installer *[download](https://pip.pypa.io/en/stable/installing/)*
 
-### Installing
+### Installing <a name="installing"></a>
 
 * `git clone https://github.com/howbotnik/sunmine.git`
 * `cd sunmine`
 * `pip install -r requirements.txt` 
 
-#### Editing the config file (Essential)
+#### Editing the config file (Essential) <a name="editing-config"></a>
 * Open *sunmine.cfg*
 * Read **CONFIG_README.md** for help setting up
 
-### Running
+### Running <a name="running"></a>
 * `cd sunmine`
 * `python main.py` <br/><br/>
 
-#### Set up as a scheduled task:
+#### Set up as a scheduled task: <a name="setting-up-as-a-scheduled-task"></a>
 Use crontab or Windows 'Task Scheduler' if you want the program to run automatically.
 
 ---
@@ -60,9 +60,20 @@ H. Wilson
 
 ---
 
-## Licence <a name="licence"></a>
+## Open Weather API <a name="open-weather"></a>
+
+The OpenWeatherMap API allows customization using the weather codes on this website:
+* https://openweathermap.org/weather-conditions
+
+As a default, sunmine is set up to use the following weather codes as acceptable for mining, but this may depend on your setup:
+* 800 - Clear Sky 
+* 801 - Few Clouds (11-25%)
+* 802 - Scattered Clouds (25-50%)
+
+Edit the acceptable weather codes in main.py for customization.
+
 
 ---
 
-## Acknowledgements <a name="acknowledgements"></a>
+## Licence <a name="licence"></a>
 
