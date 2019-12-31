@@ -1,5 +1,6 @@
 import configparser
 import ntpath
+import json
 
 config = configparser.ConfigParser()
 config.read("sunmine.cfg")
@@ -43,4 +44,4 @@ def getProgramName():
     return tail or ntpath.basename(head)
 
 def getWeatherCodes():
-    return config.get("Weather_types", "weather_codes")
+    return json.loads(config.get("Weather_types", "weather_codes"))
