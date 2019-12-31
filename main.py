@@ -10,6 +10,7 @@ import ConfigController as config
 
 def main():
     weather = Weather()
+    acceptableWeatherCodes = config.getWeatherCodes()
 
     logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.DEBUG)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
@@ -22,7 +23,7 @@ def main():
 
 
     weatherId = weatherData.get("weather")[0].get("id")
-    acceptableWeatherCodes = ["800", "801", "802"]
+
 
     # sunset/rise
     logging.debug("Getting sunrise/sunset data from the internet...")
@@ -99,6 +100,7 @@ def killProcess(processName):
             # check whether the process name matches
             if proc.name() == processName:
                 proc.kill()
+
 
 if __name__ == "__main__":
     main()

@@ -41,3 +41,6 @@ def getProgramName():
     path = config.get("Miner", "program_location")
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
+
+def getWeatherCodes():
+    return config.get("Weather_types", "weather_codes")
