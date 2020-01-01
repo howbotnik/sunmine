@@ -7,6 +7,7 @@ import MiningState
 import psutil
 import logging
 import ConfigController as config
+import datetime
 
 def main():
     weather = Weather()
@@ -84,7 +85,7 @@ def isMinerAlreadyRunning(processName):
 
 def isTheSunUp(sunSet, sunRise):
     timeCompare = TimeCompare(sunSet, sunRise)
-    if timeCompare.isTimeInRange() == True:
+    if timeCompare.isTimeInRange(timeCompare.getUpperTime(), timeCompare.getLowerTime(), datetime.datetime.now()) == True:
         return True
     else:
         return False
