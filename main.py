@@ -44,7 +44,7 @@ def main():
                 break
             else:
                 goWeather = False
-        logging.debug("Weather conditions: " + weatherData.get("weather")[0].get("main"))
+        logging.debug("Weather conditions: " + weatherData.get("weather")[0].get("main") + "- " + str(weatherId))
         logging.debug("Weather is acceptable for mining: " + str(goWeather))
 
     output = ""
