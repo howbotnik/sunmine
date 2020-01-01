@@ -70,7 +70,7 @@ As a default, sunmine is set up to use the following weather codes as acceptable
 * 801 - Few Clouds (11-25%)
 * 802 - Scattered Clouds (25-50%)
 
-Edit the acceptable weather codes in main.py for customization.
+Edit the acceptable weather codes in the config file for customization.
 
 
 ---
