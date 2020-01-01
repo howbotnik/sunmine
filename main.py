@@ -24,7 +24,6 @@ def main():
 
     weatherId = weatherData.get("weather")[0].get("id")
 
-
     # sunset/rise
     logging.debug("Getting sunrise/sunset data from the internet...")
     sunApiUrl = SunTimes.buildSunApiUrl(config)
