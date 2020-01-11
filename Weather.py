@@ -3,26 +3,25 @@ import ConfigController as Config
 
 class Weather:
     api_url_base = "https://api.openweathermap.org/data/2.5/weather?q="
-    built_api_url = ""
+    built_url = ""
 
     def __init__(self):
-        self.built_api_url = self.buildUrl()
+        built_api_url = []
+        built_api_url = self.addStringToUrlArray(built_api_url, self.api_url_base)
+        built_api_url = self.addStringToUrlArray(built_api_url, Config.getLocation())
+        built_api_url = self.addStringToUrlArray(built_api_url, ",")
+        built_api_url = self.addStringToUrlArray(built_api_url, Config.getCountryCode())
+        built_api_url = self.addStringToUrlArray(built_api_url, "&APPID=")
+        built_api_url = self.addStringToUrlArray(built_api_url, Config.getOpenWeatherToken())
+        self.built_url = self.convertArrayToString(built_api_url)
 
-    def getWeatherData(self):
-        r = requests.get(self.built_api_url)
+    def getWeatherData(self, url):
+        r = requests.get(url)
         return r.json()
 
-    def buildUrl(self):
-        urlToBuild = ""
-        urlToBuild = self.addStringToUrl(urlToBuild, self.api_url_base)
-        urlToBuild = self.addStringToUrl(urlToBuild, Config.getLocation())
-        urlToBuild = self.addStringToUrl(urlToBuild, ",")
-        urlToBuild = self.addStringToUrl(urlToBuild, Config.getCountryCode())
-        urlToBuild = self.addStringToUrl(urlToBuild, "&APPID=")
-        urlToBuild = self.addStringToUrl(urlToBuild, Config.getOpenWeatherToken())
-        return urlToBuild
+    def addStringToUrlArray(self, url_array, strToAdd):
+        url_array.append(strToAdd)
+        return url_array
 
-
-    def addStringToUrl(self, strBuild, stringToAdd):
-        strBuild += stringToAdd
-        return strBuild
+    def convertArrayToString(self, array):
+        return ''.join(array)

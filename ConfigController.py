@@ -1,9 +1,10 @@
 import configparser
 import ntpath
 import json
+import pathlib
 
 config = configparser.ConfigParser()
-config.read("sunmine.cfg")
+config.read(pathlib.Path(__file__).parent / "sunmine.cfg")
 
 def getCountryCode():
     return config.get("Location", "country_code")

@@ -20,7 +20,7 @@ def main():
     currentState = MiningState.getState()
     logging.debug("Current state of the miner: " + currentState)																																																				   # weather
     logging.debug("Getting weather data from the internet...")
-    weatherData = weather.getWeatherData()
+    weatherData = weather.getWeatherData(weather.built_url)
 
 
     weatherId = weatherData.get("weather")[0].get("id")
