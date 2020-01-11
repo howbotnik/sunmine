@@ -3,46 +3,52 @@ import ntpath
 import json
 import pathlib
 
-config = configparser.ConfigParser()
-config.read(pathlib.Path(__file__).parent / "sunmine.cfg")
 
-def getCountryCode():
-    return config.get("Location", "country_code")
+class ConfigController:
 
-def getLocation():
-    return config.get("Location", "location")
+    config = configparser.ConfigParser()
+    config.read(pathlib.Path(__file__).parent / "sunmine.cfg")
 
-def getLatitude():
-    return config.get("Location", "latitude")
+    def __init__(self) -> None:
+        super().__init__()
 
-def getLongitude():
-    return config.get("Location", "longitude")
+    def get_country_code(self):
+        return self.config.get("Location", "country_code")
 
-def getSMTPServer():
-    return config.get("Communication", "smtp_server_address")
+    def get_location(self):
+        return self.config.get("Location", "location")
 
-def getSMTPPort():
-    return config.getint("Communication", "smtp_port")
+    def get_latitude(self):
+        return self.config.get("Location", "latitude")
 
-def getSenderEmail():
-    return config.get("Communication", "sender_email")
+    def get_longitude(self):
+        return self.config.get("Location", "longitude")
 
-def getPassword():
-    return config.get("Communication", "password")
+    def get_smtp_server(self):
+        return self.config.get("Communication", "smtp_server_address")
 
-def getRecipientEmail():
-    return config.get("Communication", "recipient_email")
+    def get_smtp_port(self):
+        return self.config.getint("Communication", "smtp_port")
 
-def getOpenWeatherToken():
-    return config.get("Tokens", "open_weather")
+    def get_sender_email(self):
+        return self.config.get("Communication", "sender_email")
 
-def getProgramLocation():
-    return config.get("Miner", "program_location")
+    def get_password(self):
+        return self.config.get("Communication", "password")
 
-def getProgramName():
-    path = config.get("Miner", "program_location")
-    head, tail = ntpath.split(path)
-    return tail or ntpath.basename(head)
+    def get_recipient_email(self):
+        return self.config.get("Communication", "recipient_email")
 
-def getWeatherCodes():
-    return json.loads(config.get("Weather_types", "weather_codes"))
+    def get_open_weather_token(self):
+        return self.config.get("Tokens", "open_weather")
+
+    def get_program_location(self):
+        return self.config.get("Miner", "program_location")
+
+    def get_program_name(self):
+        path = self.config.get("Miner", "program_location")
+        head, tail = ntpath.split(path)
+        return tail or ntpath.basename(head)
+
+    def get_weather_codes(self):
+        return json.loads(self.config.get("Weather_types", "weather_codes"))
