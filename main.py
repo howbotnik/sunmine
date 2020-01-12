@@ -10,93 +10,99 @@ import logging
 from ConfigController import ConfigController
 import datetime
 
+config = ConfigController()
+
+
 def main():
-    config = ConfigController()
+
     weather = Weather()
-    acceptableWeatherCodes = config.get_weather_codes()
+    acceptable_weather_codes = config.get_weather_codes()
 
     logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.DEBUG)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.debug('Welcome to Sunmine 2019')
 
-    currentState = MiningState.getState()
-    logging.debug("Current state of the miner: " + currentState)																																																				   # weather
-
+    current_state = MiningState.getState()
+    logging.debug("Current state of the miner: " + current_state)																																																				   # weather
 
     # sunset/rise
     logging.debug("Getting sunrise/sunset data from the internet...")
-    sunApiUrl = SunTimes.buildSunApiUrl(config)
-    sunData = SunTimes.getSunDataFromApi(sunApiUrl)
-    sunRise = sunData.get("results").get("sunrise")
-    sunSet = sunData.get("results").get("sunset")
+    sun_api_url = SunTimes.buildSunApiUrl(config)
+    sun_data = SunTimes.getSunDataFromApi(sun_api_url)
+    sun_rise = sun_data.get("results").get("sunrise")
+    sun_set = sun_data.get("results").get("sunset")
 
-    goTime = False
-    goTime = isTheSunUp(sunSet, sunRise)
-    logging.debug("Sun is up: " + str(goTime))
+    go_time = False
+    go_time = is_the_sun_up(sun_set, sun_rise)
+    logging.debug("Sun is up: " + str(go_time))
 
-    if goTime == False:
+    if not go_time:
+        logging.debug("Sun is not up, program exiting.")
         sys.exit(0)
 
     logging.debug("Getting weather data from the internet...")
-    weatherData = weather.getWeatherData(weather.built_url)
+    weather_data = weather.getWeatherData(weather.built_url)
 
-    weatherId = weatherData.get("weather")[0].get("id")
+    weather_id = weather_data.get("weather")[0].get("id")
 
-    goWeather = False
-    if goTime != False:
-        for w in acceptableWeatherCodes:
-            if w == str(weatherId):
-                goWeather = True
+    go_weather = False
+    if go_time:
+        for w in acceptable_weather_codes:
+            if w == str(weather_id):
+                go_weather = True
                 break
             else:
-                goWeather = False
-        logging.debug("Weather conditions: " + weatherData.get("weather")[0].get("main") + "- " + str(weatherId))
-        logging.debug("Weather is acceptable for mining: " + str(goWeather))
+                go_weather = False
+        logging.debug("Weather conditions: " + weather_data.get("weather")[0].get("main") + "- " + str(weather_id))
+        logging.debug("Weather is acceptable for mining: " + str(go_weather))
 
     output = ""
-    if goTime == True and goWeather == True:
+    if go_time is True and go_weather is True:
         logging.debug("Mining on")
         output = "Mining On"
-        if isMinerAlreadyRunning(config.get_program_name()):
+        if is_miner_already_running(config.get_program_name()):
             logging.debug('Yes %s process was running, not starting.' % (config.get_program_name()))
         else:
             logging.debug('No process was running')
             os.startfile(config.get_program_location())
-        if "off" in currentState:
+        if "off" in current_state:
             logging.debug("Changing state, sending email.")
             Sendmail.send(output)
             MiningState.setState("on")
     else:
         logging.debug("Mining Off")
         output = "Mining Off"
-        if isMinerAlreadyRunning(config.get_program_name()):
+        if is_miner_already_running(config.get_program_name()):
             logging.debug('Yes %s process was running, killing.' % (config.get_program_name()))
-            killProcess(config.get_program_name())
+            kill_process(config.get_program_name())
 
         else:
             logging.debug('Mining process not running, do not need to kill process.')
-        if "on" in currentState:
+        if "on" in current_state:
             logging.debug("Changing state, sending email.")
             Sendmail.send(output)
             MiningState.setState("off")
 
-def isMinerAlreadyRunning(processName):
-    for proc in psutil.process_iter():
+
+def is_miner_already_running(process_name):
+    for process in psutil.process_iter():
         try:
-            if processName.lower() in proc.name().lower():
+            if process_name.lower() in process.name().lower():
                 return True
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
     return False
 
-def isTheSunUp(sunSet, sunRise):
-    timeCompare = TimeCompare(sunSet, sunRise)
-    if timeCompare.isTimeInRange(timeCompare.getUpperTime(), timeCompare.getLowerTime(), datetime.datetime.now()) == True:
+
+def is_the_sun_up(sun_set, sun_rise):
+    time_compare = TimeCompare(sun_set, sun_rise)
+    if time_compare.isTimeInRange(time_compare.getUpperTime(), time_compare.getLowerTime(), datetime.datetime.now()):
         return True
     else:
         return False
 
-def killProcess(processName):
+
+def kill_process(process_name):
     if os.name == "nt":
         # OS is windows
         os.system('Taskkill /IM ' + config.get_program_name())
@@ -104,7 +110,7 @@ def killProcess(processName):
         # OS is Linux
         for proc in psutil.process_iter():
             # check whether the process name matches
-            if proc.name() == processName:
+            if proc.name() == process_name:
                 proc.kill()
 
 
