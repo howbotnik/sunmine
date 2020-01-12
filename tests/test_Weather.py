@@ -1,10 +1,11 @@
 from unittest import TestCase
 from Weather import Weather
-import ConfigController as config
+from ConfigController import ConfigController
 
 
 class TestWeather(TestCase):
     def test_get_weather_data(self):
+        config = ConfigController()
         apiTokenFromConfig = config.get_open_weather_token()
         testApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=London,GB&APPID=" + apiTokenFromConfig
         data = Weather.getWeatherData(self, testApiUrl)
