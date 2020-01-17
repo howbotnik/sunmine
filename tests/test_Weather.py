@@ -8,7 +8,7 @@ class TestWeather(TestCase):
         config = ConfigController()
         apiTokenFromConfig = config.get_open_weather_token()
         testApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=London,GB&APPID=" + apiTokenFromConfig
-        data = Weather.getWeatherData(self, testApiUrl)
+        data = Weather.get_weather_data(testApiUrl)
         assert 'weather' in data
         assert 'main' in data
         assert 'wind' in data
@@ -19,9 +19,9 @@ class TestWeather(TestCase):
 
     def test_add_string_to_url_array(self):
         array = []
-        self.assertEqual(Weather.addStringToUrlArray(self, array, "firstString"), ["firstString"])
-        self.assertEqual(Weather.addStringToUrlArray(self, array, "secondString"), ["firstString", "secondString"])
+        self.assertEqual(Weather.add_string_to_url_array(self, array, "firstString"), ["firstString"])
+        self.assertEqual(Weather.add_string_to_url_array(self, array, "secondString"), ["firstString", "secondString"])
 
     def test_convert_array_to_string(self):
         array = ["I ", "like ", "making ", "unit ", "tests!"]
-        self.assertEqual(Weather.convertArrayToString(self, array), "I like making unit tests!")
+        self.assertEqual(Weather.convert_array_to_string(self, array), "I like making unit tests!")

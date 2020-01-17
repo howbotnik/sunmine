@@ -1,27 +1,30 @@
 import datetime
 
+
 class TimeCompare:
     upperTime = None
     lowerTime = None
 
-    def __init__(self, upperTime, lowerTime):
-        self.upperTime = self.convertTo24Hours(upperTime)
-        self.lowerTime = self.convertTo24Hours(lowerTime)
+    def __init__(self, upper_time, lower_time):
+        self.upperTime = self.convert_to_24_hours(upper_time)
+        self.lowerTime = self.convert_to_24_hours(lower_time)
 
-    def isTimeInRange(self, upper, lower, now):
+    @staticmethod
+    def is_time_in_range(upper, lower, now):
         outcome = False
-        if now.time().replace(microsecond=0) < upper.time() and now.time().replace(microsecond=0) > lower.time():
+        if upper.time() > now.time().replace(microsecond=0) > lower.time():
             outcome = True
         else:
             outcome = False
         return outcome
 
-    def convertTo24Hours(self, time):
-        convertedTime = datetime.datetime.strptime(time, "%I:%M:%S %p")
-        return convertedTime
+    @staticmethod
+    def convert_to_24_hours(time):
+        converted_time = datetime.datetime.strptime(time, "%I:%M:%S %p")
+        return converted_time
 
-    def getUpperTime(self):
+    def get_upper_time(self):
         return self.upperTime
 
-    def getLowerTime(self):
+    def get_lower_time(self):
         return self.lowerTime
