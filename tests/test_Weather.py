@@ -8,7 +8,7 @@ class TestWeather(TestCase):
         config = ConfigController()
         apiTokenFromConfig = config.get_open_weather_token()
         testApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=London,GB&APPID=" + apiTokenFromConfig
-        data = Weather.get_weather_data(testApiUrl)
+        data = Weather.get_weather_data(self, testApiUrl)
         assert 'weather' in data
         assert 'main' in data
         assert 'wind' in data

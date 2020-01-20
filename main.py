@@ -96,7 +96,7 @@ def is_miner_already_running(process_name):
 
 def is_the_sun_up(sun_set, sun_rise):
     time_compare = TimeCompare(sun_set, sun_rise)
-    if time_compare.is_time_in_range(time_compare.get_upper_time(), time_compare.get_lower_time(), datetime.datetime.now()):
+    if time_compare.is_time_in_range(time_compare.get_upper_time(), time_compare.get_lower_time(), datetime.datetime.now().time()):
         return True
     else:
         return False

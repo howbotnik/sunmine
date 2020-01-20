@@ -12,7 +12,7 @@ class TimeCompare:
     @staticmethod
     def is_time_in_range(upper, lower, now):
         outcome = False
-        if upper.time() > now.time().replace(microsecond=0) > lower.time():
+        if upper > now.replace(microsecond=0) > lower:
             outcome = True
         else:
             outcome = False
@@ -20,7 +20,7 @@ class TimeCompare:
 
     @staticmethod
     def convert_to_24_hours(time):
-        converted_time = datetime.datetime.strptime(time, "%I:%M:%S %p")
+        converted_time = datetime.datetime.strptime(time, "%I:%M:%S %p").time()
         return converted_time
 
     def get_upper_time(self):
