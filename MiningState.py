@@ -6,7 +6,6 @@ fn = pathlib.Path(__file__).parent / 'state.txt'
 
 class MiningState:
 
-
     @staticmethod
     def get_state():
         file = open(fn, "r")
