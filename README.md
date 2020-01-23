@@ -76,4 +76,7 @@ Edit the acceptable weather codes in the config file for customization.
 ---
 
 ## Licence <a name="licence"></a>
+MIT License
+
+Copyright (c) 2020 Howard Wilson
 
