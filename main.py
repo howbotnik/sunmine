@@ -3,7 +3,7 @@ import sys
 from Weather import Weather
 from TimeCompare import TimeCompare
 import SunTimes
-import Sendmail
+from SendMail import SendMail
 from MiningState import MiningState
 import psutil
 import logging
@@ -11,6 +11,7 @@ from ConfigController import ConfigController
 import datetime
 
 config = ConfigController()
+send_mail = SendMail()
 
 
 def main():
@@ -67,7 +68,7 @@ def main():
             os.startfile(config.get_program_location())
         if "off" in current_state:
             logging.debug("Changing state, sending email.")
-            Sendmail.send(output)
+            send_mail.send(output)
             MiningState.set_state("on")
     else:
         logging.debug("Mining Off")
@@ -80,7 +81,7 @@ def main():
             logging.debug('Mining process not running, do not need to kill process.')
         if "on" in current_state:
             logging.debug("Changing state, sending email.")
-            Sendmail.send(output)
+            send_mail.send(output)
             MiningState.set_state("off")
 
 
