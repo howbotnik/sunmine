@@ -37,10 +37,6 @@ def main():
     go_time = is_the_sun_up(sun_set, sun_rise)
     logging.debug("Sun is up: " + str(go_time))
 
-    if not go_time:
-        logging.debug("Sun is not up, program exiting.")
-        sys.exit(0)
-
     logging.debug("Getting weather data from the internet...")
     weather_data = weather.get_weather_data(weather.built_url)
 
