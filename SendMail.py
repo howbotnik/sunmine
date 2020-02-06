@@ -41,14 +41,14 @@ class SendMail:
         return "Sunmine has set your mining rig to: " + message
 
     def build_server(self, config):
-        return smtplib.SMTP(config.get_smtp_server(), config.get_smtp_port())[0]
+        return smtplib.SMTP(config.get_smtp_server(), config.get_smtp_port())
 
     def server_login(self, server, config):
         # expect 200 range code return (235 in testing)
         return server.login(config.get_sender_email(), config.get_password())[0]
 
     def send_mail(self, server, config, message):
-        return server.sendmail(config.get_sender_email(), config.get_recipient_email(), message)[0]
+        return server.sendmail(config.get_sender_email(), config.get_recipient_email(), message)
 
     def quit_server(self, server):
         return server.quit()[0]
