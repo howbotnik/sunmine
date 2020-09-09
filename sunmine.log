@@ -1,9 +1,10 @@
-Reading file.
-2019-11-29 22:50:02
-Current state of the miner: off
-Getting weather data from the internet...
-Weather is acceptable for mining: Clear
-Getting sunrise/sunset data from the internet...
-Seeing if now.time() is between sunrise and sunset...
-Now time is in dark hours
-Mining Off
+2020-09-09 17:47:51,835 - sunmine_log - INFO - Logging works!
+2020-09-09 17:47:51,835 - sunmine_log - INFO - Started Sunmine application
+2020-09-09 17:47:51,835 - sunmine_log - INFO - Current state of the miner: off
+2020-09-09 17:47:51,835 - sunmine_log - INFO - Getting sunrise/sunset data from the internet...
+2020-09-09 17:47:52,710 - sunmine_log - INFO - Sun is up: True
+2020-09-09 17:47:52,710 - sunmine_log - INFO - Getting weather data from the internet...
+2020-09-09 17:47:52,966 - sunmine_log - INFO - Weather conditions: Clouds - 803
+2020-09-09 17:47:52,966 - sunmine_log - INFO - Weather is acceptable for mining: False
+2020-09-09 17:47:52,966 - sunmine_log - INFO - Mining Off
+2020-09-09 17:47:53,782 - sunmine_log - WARNING - Mining process not running, do not need to kill process.
