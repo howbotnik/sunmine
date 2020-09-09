@@ -1,6 +1,6 @@
 # sunmine
 
-Sunmine is a piece of python software that aims to switch **on** your mining software during the most profitable **SOLAR** times. 
+Sunmine is a piece of python software (xmrig, xmr-stak etc) that aims to switch **on** your mining software during the most profitable **SOLAR** times. 
 <br><br> 
 It uses APIs that check if the sun has risen and the weather conditions in your specified location.
 <br><br>
