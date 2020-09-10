@@ -1,10 +1,11 @@
 import logging
+from logging.handlers import RotatingFileHandler
 
 def get_logger():
     print('Creating logger')
     logger = logging.getLogger('sunmine_log')
     logger.setLevel(logging.DEBUG)
-    fh = logging.FileHandler('sunmine.log')
+    fh = RotatingFileHandler('sunmine.log', mode='a', maxBytes=5*1024*1024, backupCount=2, encoding=None, delay=0)
     fh.setLevel(logging.DEBUG)
     logger.addHandler(fh)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')

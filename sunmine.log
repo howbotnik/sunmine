@@ -8,3 +8,9 @@
 2020-09-09 17:47:52,966 - sunmine_log - INFO - Weather is acceptable for mining: False
 2020-09-09 17:47:52,966 - sunmine_log - INFO - Mining Off
 2020-09-09 17:47:53,782 - sunmine_log - WARNING - Mining process not running, do not need to kill process.
+2020-09-10 20:01:54,900 - sunmine_log - INFO - Logging works!
+2020-09-10 20:01:54,900 - sunmine_log - INFO - Started Sunmine application
+2020-09-10 20:01:54,908 - sunmine_log - INFO - Current state of the miner: off
+2020-09-10 20:01:54,908 - sunmine_log - INFO - Getting sunrise/sunset data from the internet...
+2020-09-10 20:01:55,797 - sunmine_log - INFO - Sun is up: False
+2020-09-10 20:01:55,797 - sunmine_log - INFO - Getting weather data from the internet...
