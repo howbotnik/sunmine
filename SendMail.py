@@ -1,15 +1,16 @@
 import smtplib
 from ConfigController import ConfigController
-import logging
+import sunmine_logger
 
 
 class SendMail:
+    logger = sunmine_logger.get_logger()
 
     def __init__(self):
         pass
 
     def send(self, message):
-        logging.debug("Sending email.")
+        self.logger.info("Sending email.")
         config = ConfigController()
         server = self.build_server(config)
         self.server_connect(server, config)
@@ -44,7 +45,6 @@ class SendMail:
         return smtplib.SMTP(config.get_smtp_server(), config.get_smtp_port())
 
     def server_login(self, server, config):
-        # expect 200 range code return (235 in testing)
         return server.login(config.get_sender_email(), config.get_password())[0]
 
     def send_mail(self, server, config, message):

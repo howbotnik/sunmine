@@ -5,7 +5,6 @@ import SunTimes
 from SendMail import SendMail
 from MiningState import MiningState
 import psutil
-import logging
 from ConfigController import ConfigController
 import sunmine_logger
 import datetime
